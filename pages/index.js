@@ -98,6 +98,7 @@ import { MetricsBox } from "../components/MetricsBox";
 import { UnitSwitch } from "../components/UnitSwitch";
 import { LoadingScreen } from "../components/LoadingScreen";
 import { ErrorScreen } from "../components/ErrorScreen";
+import  { getWeatherCode } from "../services/helpers";
 
 import config from "../config.json";
 import styles from "../styles/Home.module.css";
@@ -130,12 +131,21 @@ export const App = () => {
       ? setUnitSystem("imperial")
       : setUnitSystem("metric");
 
+
   return weatherData && !weatherData.message ? (
     <div className={styles.wrapper}>
       <MainCard
         city={config.city}
         country={config.country}
-        // description={weatherData.weather[0].description}
+        // description={weatherData.current.weather_code}
+        description={
+          getWeatherCode(weatherData.current.weather_code, weatherData.current.day)
+            .description
+        }
+        iconName={
+          getWeatherCode(weatherData.current.weather_code, weatherData.current.day)
+            .iconName
+        }
         // iconName={weatherData.weather[0].icon}
         unitSystem={unitSystem}
         weatherData={weatherData}
@@ -158,7 +168,7 @@ export const App = () => {
           /> */}
         </Header>
         <MetricsBox weatherData={weatherData} unitSystem={unitSystem} />
-        {/* <UnitSwitch onClick={changeSystem} unitSystem={unitSystem} /> */}
+        <UnitSwitch onClick={changeSystem} unitSystem={unitSystem} />
       </ContentBox>
     </div>
 

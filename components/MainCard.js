@@ -16,13 +16,13 @@ export const MainCard = ({
         {city}, 
         {country}
       </h1>
-      {/* <p className={styles.description}>{description}</p> */}
-      {/* <Image
+      {<p className={styles.description}>{description}</p>}
+      {<Image
         width="300px"
         height="300px"
         src={`/icons/${iconName}.svg`}
         alt="weatherIcon"
-      /> */}
+      /> }
        <h1 className={styles.temperature}>
         {unitSystem == "metric"
           ? Math.round(weatherData.current.temperature_2m)

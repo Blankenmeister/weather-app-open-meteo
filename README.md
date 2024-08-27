@@ -6,7 +6,7 @@ Check the current weather on any city on the planet. Switch between metric and i
 
 ## Features
 
-1. User's ability to search cities
+1. User's ability to search cities  
 
 2. Current local time and date
 
