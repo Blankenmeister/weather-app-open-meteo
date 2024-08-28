@@ -98,7 +98,9 @@ import { MetricsBox } from "../components/MetricsBox";
 import { UnitSwitch } from "../components/UnitSwitch";
 import { LoadingScreen } from "../components/LoadingScreen";
 import { ErrorScreen } from "../components/ErrorScreen";
-import  { getWeatherCode } from "../services/helpers";
+import  { getDescriptionCode } from "../services/helpers";
+import  { getIconNameCode } from "../services/helpers";
+
 
 import config from "../config.json";
 import styles from "../styles/Home.module.css";
@@ -139,11 +141,11 @@ export const App = () => {
         country={config.country}
         // description={weatherData.current.weather_code}
         description={
-          getWeatherCode(weatherData.current.weather_code, weatherData.current.day)
+          getDescriptionCode(weatherData.current.weather_code)
             .description
         }
         iconName={
-          getWeatherCode(weatherData.current.weather_code, weatherData.current.day)
+          getIconNameCode(weatherData.current.weather_code, weatherData.current.day )
             .iconName
         }
         // iconName={weatherData.weather[0].icon}
