@@ -76,7 +76,9 @@ return codeDescription[code];
 
 };
 
-export const getIconNameCode = (code, day) => {
+export const getIconNameCode = (code, day = true) => {
+  // console.log(day);
+  
   const codeIconName = {
     0: { iconName: day ? "01d" : "01n" },
     1: { iconName: day ? "02d" : "02n" },

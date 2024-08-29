@@ -145,7 +145,7 @@ export const App = () => {
             .description
         }
         iconName={
-          getIconNameCode(weatherData.current.weather_code, weatherData.current.day )
+          getIconNameCode(weatherData.current.weather_code, weatherData.current.day)
             .iconName
         }
         // iconName={weatherData.weather[0].icon}
