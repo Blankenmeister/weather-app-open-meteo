@@ -76,38 +76,48 @@ return codeDescription[code];
 
 };
 
-export const getIconNameCode = (code, day = true) => {
-  // console.log(day);
+export const getIconNameCode = (code, weatherData) => {
   
+  
+    const day = () => {
+      const sunrise = new Date(weatherData.daily.sunrise[0]).getTime();
+      const sunset = new Date(weatherData.daily.sunset[0]).getTime();
+      const now = Date.now();
+      
+      return now >= sunrise && now <= sunset;
+    
+}
+// console.log(day);
+
   const codeIconName = {
-    0: { iconName: day ? "01d" : "01n" },
-    1: { iconName: day ? "02d" : "02n" },
-    2: { iconName: day ? "03d" : "03n" },
-    3: { iconName: day ? "04d" : "04n" },
-    45: { iconName: day ? "50d" : "50n" },
-    48: { iconName: day ? "50d" : "50n" },
-    51: { iconName: day ? "09d" : "09n" },
-    53: { iconName: day ? "09d" : "09n" },
-    55: { iconName: day ? "09d" : "09n" },
-    56: { iconName: day ? "09d" : "09n" },
-    57: { iconName: day ? "09d" : "09n" },
-    61: { iconName: day ? "10d" : "10n" },
-    63: { iconName: day ? "10d" : "10n" },
-    65: { iconName: day ? "10d" : "10n" },
-    66: { iconName: day ? "10d" : "10n" },
-    67: { iconName: day ? "10d" : "10n" },
-    71: { iconName: day ? "13d" : "13n" },
-    73: { iconName: day ? "13d" : "13n" },
-    75: { iconName: day ? "13d" : "13n" },
-    77: { iconName: day ? "13d" : "13n" },
-    80: { iconName: day ? "09d" : "09n" },
-    81: { iconName: day ? "09d" : "09n" },
-    82: { iconName: day ? "09d" : "09n" },
-    85: { iconName: day ? "13d" : "13n" },
-    86: { iconName: day ? "13d" : "13n" },
-    95: { iconName: day ? "11d" : "11n" },
-    96: { iconName: day ? "11d" : "11n" },
-    99: { iconName: day ? "11d" : "11n" },
+    0: { iconName: day() ? "01d" : "01n" },
+    1: { iconName: day() ? "02d" : "02n" },
+    2: { iconName: day() ? "03d" : "03n" },
+    3: { iconName: day() ? "04d" : "04n" },
+    45: { iconName: day() ? "50d" : "50n" },
+    48: { iconName: day() ? "50d" : "50n" },
+    51: { iconName: day() ? "09d" : "09n" },
+    53: { iconName: day() ? "09d" : "09n" },
+    55: { iconName: day() ? "09d" : "09n" },
+    56: { iconName: day() ? "09d" : "09n" },
+    57: { iconName: day() ? "09d" : "09n" },
+    61: { iconName: day() ? "10d" : "10n" },
+    63: { iconName: day() ? "10d" : "10n" },
+    65: { iconName: day() ? "10d" : "10n" },
+    66: { iconName: day() ? "10d" : "10n" },
+    67: { iconName: day() ? "10d" : "10n" },
+    71: { iconName: day() ? "13d" : "13n" },
+    73: { iconName: day() ? "13d" : "13n" },
+    75: { iconName: day() ? "13d" : "13n" },
+    77: { iconName: day() ? "13d" : "13n" },
+    80: { iconName: day() ? "09d" : "09n" },
+    81: { iconName: day() ? "09d" : "09n" },
+    82: { iconName: day() ? "09d" : "09n" },
+    85: { iconName: day() ? "13d" : "13n" },
+    86: { iconName: day() ? "13d" : "13n" },
+    95: { iconName: day() ? "11d" : "11n" },
+    96: { iconName: day() ? "11d" : "11n" },
+    99: { iconName: day() ? "11d" : "11n" },
   };
 
 return codeIconName[code];
