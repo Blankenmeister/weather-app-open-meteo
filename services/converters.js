@@ -33,7 +33,6 @@ export const degToCompass = (num) => {
 };
 
 
-
 export const localTime = (weatherTime, unitSystem) => {
   
   let frenchTime = new Date(weatherTime)
@@ -50,10 +49,11 @@ export const localTime = (weatherTime, unitSystem) => {
   
 };
 
-// export const unixToLocalTime = (unixSeconds, timezone) => {
-//   let time = new Date((unixSeconds + timezone) * 1000)
-//     .toISOString()
-//     .match(/(\d{2}:\d{2})/)[0];
 
-//   return time.startsWith("0") ? time.substring(1) : time;
-// };
+export const unixToLocalTime = (unixSeconds, timezone) => {
+  let time = new Date((unixSeconds + timezone) * 1000)
+    .toISOString()
+    .match(/(\d{2}:\d{2})/)[0];
+
+  return time.startsWith("0") ? time.substring(1) : time;
+};

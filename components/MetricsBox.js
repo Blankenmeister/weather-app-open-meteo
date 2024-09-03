@@ -40,12 +40,12 @@ export const MetricsBox = ({ weatherData, unitSystem }) => {
         metric={getTime(
           unitSystem,
           weatherData.daily.sunrise[0],
-          // weatherData.timezone
+          weatherData.timezone
         )}
         unit={getAMPM(
           unitSystem,
           weatherData.daily.sunrise[0],
-          // weatherData.timezone
+          weatherData.timezone
         )}
       />
       <MetricsCard
@@ -54,9 +54,9 @@ export const MetricsBox = ({ weatherData, unitSystem }) => {
         metric={getTime(
           unitSystem,
           weatherData.daily.sunset[0],
-          // weatherData.timezone
+          weatherData.timezone
         )}
-        unit={getAMPM(unitSystem, weatherData.sunset)}
+        unit={getAMPM(unitSystem, weatherData.daily.sunset[0])}
       />
     </div>
   );
