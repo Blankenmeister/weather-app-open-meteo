@@ -40,7 +40,6 @@ export const App = () => {
           return () => clearInterval(hourInterval);
   }, []);
 
-  console.log("1",weatherData);
 
   
   const changeSystem = () =>
