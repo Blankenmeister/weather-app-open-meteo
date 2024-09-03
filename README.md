@@ -2,13 +2,14 @@
 
 **Mettre à jour l’application**  
 Intégrer le changement d’API en faveur d’open meteo :  
-prendre en main la documentation et le fonctionnement de l’API open meteo,  
-intégrer les changements dans la requête,  
-intégrer les mises à jour nécessaires pour le traitement des données et  
-l’affichage du résultat, en fonction du format de réponse de l’API d’open meteo.  
+- prendre en main la documentation et le fonctionnement de l’API open meteo,  
+- intégrer les changements dans la requête,  
+- intégrer les mises à jour nécessaires pour le traitement des données  
+  et l’affichage du résultat, en fonction du format de réponse de l’API d’open meteo.  
 
-Intégrer l’évolution pour ne plus avoir de recherche de la ville mais une localisation  pré-configurée dans un fichier de configuration.  
-Intégrer le rafraîchissement des données toutes les heures.  
+- Intégrer l’évolution pour ne plus avoir de recherche de la ville  
+mais une localisation pré-configurée dans un fichier de configuration. 
+- Intégrer le rafraîchissement des données toutes les heures.  
 
 ![Alt img](https://images.ctfassets.net/zlsyc9paq6sa/3uBrJ07WSM40FpolgjInHY/7d886cb4187b52194bf9b63c183a1d3a/1627637330_x.gif)
 
